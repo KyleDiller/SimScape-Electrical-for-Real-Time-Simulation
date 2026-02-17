@@ -1,0 +1,44 @@
+This is a deeper explanation of the FPGA directory.
+
+These models are designed to be HDL Coder ready. The objective sample time is 1-2 micro-seconds.
+At 1-2 us , Pejovic compensated inverters have excellent accuruacy, both at the AC-side of the inverter and on the DC-side also.
+The DC side current is often neglected when verifying accuracy of the Pejovic method but is often very bad with the standard Pejovic.
+One can adjust the Gs=L/h parameter but it is useless.
+
+The Pevovic method is also prone to spurious oscillations at swtiching instants and creates spurious losses in high frequency PWM inverter.
+The compensated method is really simple and obvious: the inverter goes from an equivalent L-C (Vout=Vdc) to C-L (Vout=gnd), so you just have to initialize correctly the L-C elements and no more losses.
+This is explained in:
+C. Dufour, S. Cense, T. Ould Bachir, L.-A. Grégoire, J. Bélanger, “General purpose reconfigurable low-latency electric circuit and drive solver on FPGA”, 38th Annual Conference of the IEEE Industrial Electronics Society (IECON-2012), Montréal, Canada, Oct. 25-28, 2012.
+
+The other inverter method presented here is a Switching-Function with High-impedance (SFHI) capability. Again very simple principle: in active mode, Vout=Vdc*g_upper+V_gnd*g_lower.
+When dead-time is present (g_upper==g_lower=0), then the load current forces the correct equivalent gate!
+And when all gates=0 and current also goes to zero, a little PI controller forces the inverter output current to zero.
+(And it works really best with small time-step). 
+
+The SFHI has also this nice characteristic: it can be used  with oversampling method because it computes the averaged voltage output per time step.
+Resolution limit is infinite: if you drive this model with timed digital output, let's say at 20 ns, then the SWHI will compute the averaged solution in the large time step!
+(Very accurate)
+
+The motor models (PMSM and induction motor) are also interesting for FPGA implementation because they have a fixed admittance.
+
+Motors and inverters together makes models that have a unique and constant admittance as seen by the Simscape Solver. So the latter can easily build a nodal or state-space equation for the model with a reasonable amount of FPGA ressources.
+(Then, I wish that someone can verify this claim, I don't have a SpeedGoat target nor FPGA cards)
+
+- Basic Pejovic switch test model
+
+- Single-phase 2-level inverter with RL load, made with Pejovic switches and compensated for switching losses.
+
+- MATE_PMSMDynamicSwitches.slx : complete PMSM drive with compensated Pejovic switches (also called Dynamic Switch)
+     This demo is derived from https://www.mathworks.com/help/hdlcoder/ug/generate-hdl-code-for-simscape-models-using-dynamic-switch-approximation.html
+     Using compensated Dynamic Switches results in very accurate DC current simulation. By comparison, the original demo is completely innacurate for Idc (you need to add the current sensor at the battery). Accurate DC current are important in battery management systems. 
+     Without compensation, the battery will see a greater energy outflow. This is the well-known problem spurious power losses of the Pejovic method. The power losses will increase with the PWM frequency. See reference section, IECON paper.
+     
+ - MATE_PermanentMagnetSynchronousMachine.slx: complete 9 kHZ PMSM Drive with AC-link rectifier. The inverter is a switching function with rectification capability and fixed admittance. The PMSM motor is of unprecedented formulation with the constant part of the mutual inductance directly into the SimScape solver. It also have a fixed admittance as seen by the main SimScape DAE solver. See /MATE/doc for the PMSM equations.
+ The complete model is designed to be compatible with HDL Coder without modifications as all components have fixed admittance.
+
+ -MATE_SwitchedReluctanceMotor64Drive.slx: complete SRM drive with switching functions. Extremely accurate and HDL Coder ready.
+
+ -MATEInductionMachineDTC.slx: complete induction machine with direct torque control made with Pejovic compensated switches and Fixed referential IM, therefore well-suited for HDL coder.
+Pejovic switches offer the advantage of having a constant admittance in both ON and OFF position. This constant admittance avoid the need for refactorisation of nodal equation (or state-space permutation matrix), something to avoid in FPGA because it is very time costly. As I am not expert (yet) on MATLAB HDL coder,nor do I have FPGA boards, I would like to have feedback on the actual implementation of th
+
+  -MATE_3level_DriveOversampling.slx: a simple 3-level NPC drive with time-step averaging/high-impedance capable switching function. The model includes all common topology cases: w/wo neutral return, w/wo floating back-EMF source, battery disconnect, rectification, etc...
