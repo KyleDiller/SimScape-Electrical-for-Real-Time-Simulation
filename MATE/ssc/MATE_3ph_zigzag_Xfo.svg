@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:d="http://www.mathworks.com/blockgraphics" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg" width="260" height="400" d:options="PreserveAspect:On;ScalingOnResizeMax:2.0;Rotate:Off;Resize:FitToBlock;">
+	<defs>
+		<style>
+			.font-size-xs {
+				font-size: 18px; stroke-width: 0.46px;
+			}
+					</style>
+	</defs>
+	<g id="part_1" title="part_0" ie-ports="left:simulink*simulink*simulink,top:,right:simulink*simulink*simulink*simulink*simulink*simulink*simulink*simulink*simulink*simulink*simulink*simulink,bottom:">
+		<g id="group_275">
+			<line id="line_62" class="line" x1="189.26" y1="219.85" x2="189.26" y2="242.62"/>
+			<line id="line_63" class="line" x1="189.26" y1="242.62" x2="211.26" y2="258.69"/>
+			<line id="line_64" class="line" x1="189.26" y1="242.62" x2="166.76" y2="258.69"/>
+		</g>
+		<g id="group">
+			<line id="line_103" class="line" x1="190.51" y1="73.31" x2="167.51" y2="111.31"/>
+			<line id="line_131" class="line" x1="167.51" y1="111.31" x2="211.51" y2="111.31"/>
+			<line id="line_160" class="line" x1="211.51" y1="111.31" x2="190.51" y2="73.31"/>
+		</g>
+		<g id="group_274">
+			<line id="line_192" class="line" x1="183.51" y1="145.86" x2="211.51" y2="184.63"/>
+			<line id="line_223" class="line" x1="171.01" y1="184.63" x2="222.01" y2="184.63"/>
+			<line id="line_273" class="line" x1="189.51" y1="153.86" x2="166.01" y2="194.97"/>
+		</g>
+		<g id="group_279">
+			<line id="line_276" class="line" transform="matrix(0.7880107536,0.6156614753,-0.6156614753,0.7880107536,234.7590504535,-57.8198172568)" x1="187.34" y1="292.6" x2="215.34" y2="331.37"/>
+			<line id="line_277" class="line" transform="matrix(0.7880107536,0.6156614753,-0.6156614753,0.7880107536,241.0912277769,-46.8797784293)" x1="163.12" y1="326.65" x2="214.12" y2="326.65"/>
+			<line id="line_278" class="line" transform="matrix(0.7880107536,0.6156614753,-0.6156614753,0.7880107536,227.2275537848,-45.8067480579)" x1="191.88" y1="286.5" x2="168.38" y2="327.61"/>
+		</g>
+		<ellipse id="ellipse" class="ellipse" cx="115.01" cy="202.73" rx="14.99" ry="156.42"/>
+		<ellipse id="ellipse_310" class="ellipse" style="fill:none;" cx="133.77" cy="92.31" rx="18.75" ry="21"/>
+		<ellipse id="ellipse_311" class="ellipse" style="fill:none;" cx="136.47" cy="163.63" rx="18.75" ry="21"/>
+		<ellipse id="ellipse_312" class="ellipse" style="fill:none;" cx="136.47" cy="236.38" rx="18.75" ry="21"/>
+		<ellipse id="ellipse_313" class="ellipse" style="fill:none;" cx="130" cy="316.02" rx="18.75" ry="21"/>
+		<g id="group_405">
+			<g id="group_314">
+				<line id="line" class="line" x1="66.01" y1="161.85" x2="66.01" y2="184.62"/>
+				<line id="line_34" class="line" x1="66.01" y1="184.62" x2="86.01" y2="205.31"/>
+				<line id="line_61" class="line" x1="66.01" y1="184.62" x2="44.01" y2="205.31"/>
+			</g>
+			<line id="line_339" class="line" x1="66.01" y1="184.62" x2="66.01" y2="231.24"/>
+			<line id="line_369" class="line" x1="55.01" y1="231.24" x2="76.01" y2="231.24"/>
+			<line id="line_388" class="line" x1="60.51" y1="236.38" x2="71.01" y2="236.38"/>
+			<line id="line_404" class="line" x1="63.76" y1="241.62" x2="69.01" y2="241.62"/>
+		</g>
+		<text id="text" class="text font-size-xs" x="174.24" y="119.13">
+			<tspan dx="0" dy="16.28" x="174.24">+15</tspan>
+		</text>
+		<text id="text_406" class="text font-size-xs" x="173.35" y="51.53">
+			<tspan dx="0" dy="16.28" x="173.35">+30</tspan>
+		</text>
+		<text id="text_407" class="text font-size-xs" x="184.26" y="200">
+			<tspan dx="0" dy="16.28" x="184.26">0</tspan>
+		</text>
+		<text id="text_408" class="text font-size-xs" x="173.99" y="266.91">
+			<tspan dx="0" dy="16.28" x="173.99">-15</tspan>
+		</text>
+	</g>
+</svg>

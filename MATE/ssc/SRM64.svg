@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:d="http://www.mathworks.com/blockgraphics" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg" width="399" height="373" d:options="PreserveAspect:On;ScalingOnResizeMax:2.0;Rotate:Off;Resize:FitToBlock;">
+	<g id="part_1" title="part_0" ie-ports="left:simulink*simulink*simulink*simulink*simulink*simulink*simulink,top:,right:simulink,bottom:">
+		<ellipse id="ellipse" class="ellipse" style="stroke-width:2;" cx="208.54" cy="175.81" rx="144" ry="138"/>
+		<ellipse id="ellipse_85" class="ellipse" style="stroke-width:2;" cx="206.5" cy="178.81" rx="12.74" ry="13.5"/>
+		<path id="path" class="path" style="stroke-width:2;" d=" M 181.02,125.31 Q 193.26,115.31 206.51,115.31 Q 219.76,115.31 234.02,125.31"/>
+		<path id="path_86" class="path" style="stroke-width:2;" transform="matrix(-0.9975640502,0.0697564737,-0.0697564737,-0.9975640502,432.963753174,456.0995056826)" d=" M 182,240.61 Q 194.24,230.61 207.49,230.61 Q 220.74,230.61 235,240.61"/>
+		<path id="path_87" class="path" style="stroke-width:2;" transform="matrix(0,0.9999999999,-0.9999999999,0,435.3402420761,-77.690231219)" d=" M 230,183.84 Q 242.24,173.84 255.49,173.84 Q 268.74,173.84 283,183.84"/>
+		<path id="path_88" class="path" style="stroke-width:2;" transform="matrix(0,-0.9999999999,0.9999999999,0,-24.2837998153,333.3100890071)" d=" M 128,183.78 Q 140.24,173.78 153.49,173.78 Q 166.74,173.78 181,183.78"/>
+		<line id="line" class="line" style="stroke-width:2;" x1="159.47" y1="152.31" x2="181.02" y2="152.31"/>
+		<line id="line_106" class="line" style="stroke-width:2;" x1="181.02" y1="152.31" x2="181.02" y2="125.31"/>
+		<line id="line_139" class="line" style="stroke-width:2;" x1="234.02" y1="125.31" x2="234.02" y2="152.31"/>
+		<line id="line_149" class="line" style="stroke-width:2;" x1="234.02" y1="152.31" x2="251.47" y2="152.31"/>
+		<line id="line_157" class="line" style="stroke-width:2;" x1="251.47" y1="205.31" x2="234.02" y2="205.31"/>
+		<line id="line_180" class="line" style="stroke-width:2;" x1="234.02" y1="205.31" x2="234.66" y2="228.77"/>
+		<line id="line_197" class="line" style="stroke-width:2;" x1="159.47" y1="205.31" x2="181.02" y2="205.31"/>
+		<line id="line_225" class="line" style="stroke-width:2;" x1="181.02" y1="205.31" x2="181.79" y2="232.46"/>
+		<path id="path_260" class="path" style="stroke-width:2;" d=" M 181.02,101.31 Q 196.28,94.6 208.9,94.6 Q 221.53,94.6 231.52,101.31"/>
+		<path id="path_261" class="path" style="stroke-width:2;" transform="matrix(0.3746065934,0.9271838545,-0.9271838545,0.3746065934,310.6275223051,-166.9999305993)" d=" M 252.59,151.79 Q 264.83,141.79 278.08,141.79 Q 291.33,141.79 305.59,151.79"/>
+		<path id="path_262" class="path" style="stroke-width:2;" transform="matrix(-0.4999999999,0.8660254037,-0.8660254037,-0.4999999999,596.5277285876,101.1649956552)" d=" M 242.55,227.8 Q 254.79,217.8 268.04,217.8 Q 281.29,217.8 295.55,227.8"/>
+		<path id="path_263" class="path" style="stroke-width:2;" transform="matrix(-0.9999999999,1e-10,-1e-10,-0.9999999999,412.968582049,518.4518448593)" d=" M 179.97,264.23 Q 192.21,254.23 205.46,254.23 Q 218.71,254.23 232.97,264.23"/>
+		<path id="path_264" class="path" style="stroke-width:2;" transform="matrix(-0.4848096202,-0.8746197071,0.8746197071,-0.4848096202,14.1886279589,442.0160199905)" d=" M 110.76,221.83 Q 123,211.83 136.25,211.83 Q 149.5,211.83 163.76,221.83"/>
+		<path id="path_265" class="path" style="stroke-width:2;" transform="matrix(0.6018150231,-0.79863551,0.79863551,0.6018150231,-49.5141044316,166.7970857441)" d=" M 116,138.02 Q 128.24,128.02 141.49,128.02 Q 154.74,128.02 169,138.02"/>
+		<line id="line_519" class="line" style="stroke-width:2;" x1="284.34" y1="173.23" x2="313.28" y2="173.23"/>
+		<line id="line_547" class="line" style="stroke-width:2;" x1="277.95" y1="197.3" x2="313.28" y2="197.32"/>
+		<line id="line_577" class="line" style="stroke-width:2;" x1="251.45" y1="243.2" x2="269.05" y2="264.22"/>
+		<line id="line_624" class="line" style="stroke-width:2;" x1="233.03" y1="254.21" x2="242.75" y2="277.31"/>
+		<line id="line_676" class="line" style="stroke-width:2;" x1="180.03" y1="254.21" x2="170.25" y2="277.31"/>
+		<line id="line_690" class="line" style="stroke-width:2;" x1="154.51" y1="237.63" x2="137.29" y2="259.22"/>
+		<line id="line_716" class="line" style="stroke-width:2;" x1="130.52" y1="157.19" x2="100.01" y2="157.22"/>
+		<line id="line_752" class="line" style="stroke-width:2;" x1="128.81" y1="191.27" x2="100.01" y2="186.5"/>
+		<line id="line_774" class="line" style="stroke-width:2;" x1="162.41" y1="114.86" x2="142.48" y2="94.6"/>
+		<line id="line_797" class="line" style="stroke-width:2;" x1="181.02" y1="101.31" x2="170.25" y2="77.96"/>
+		<line id="line_820" class="line" style="stroke-width:2;" x1="231.52" y1="101.31" x2="251.47" y2="77.96"/>
+		<line id="line_858" class="line" style="stroke-width:2;" x1="264.49" y1="124.09" x2="279.08" y2="104.73"/>
+		<path id="path_872" class="path" style="stroke-width:2;" d=" M 142.48,94.6 Q 145.51,86.28 152.45,82.12 Q 159.4,77.96 170.25,77.96"/>
+		<path id="path_928" class="path" style="stroke-width:2;" d=" M 251.47,77.96 Q 264.89,82.94 271.79,89.63 Q 278.69,96.32 279.08,104.73"/>
+		<path id="path_944" class="path" style="stroke-width:2;" d=" M 313.28,173.23 Q 313.29,185.27 313.29,191.3 Q 313.29,197.32 313.28,197.32"/>
+		<line id="line_954" class="line" style="stroke-width:2;" x1="100.01" y1="157.22" x2="100.01" y2="186.5"/>
+		<path id="path_995" class="path" style="stroke-width:2;" d=" M 137.29,259.22 Q 146.26,268.26 154.5,272.78 Q 162.74,277.3 170.25,277.31"/>
+		<path id="path_1012" class="path" style="stroke-width:2;" d=" M 269.05,264.22 Q 266.83,270.76 260.25,274.03 Q 253.67,277.3 242.75,277.31"/>
+	</g>
+</svg>

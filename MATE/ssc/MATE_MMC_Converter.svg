@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:d="http://www.mathworks.com/blockgraphics" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg" width="400" height="290" d:options="PreserveAspect:On;ScalingOnResizeMax:2.0;Rotate:Off;Resize:FitToBlock;">
+	<defs>
+		<style>
+			.font-size-default {
+				font-size: 34px; stroke-width: 0.85px;
+			}
+			.font-size-xs {
+				font-size: 24px; stroke-width: 0.6px;
+			}
+					</style>
+	</defs>
+	<g id="part_1" title="part_0" ie-ports="left:simulink*simulink,top:,right:simulink*simulink*simulink,bottom:">
+		<line id="line_303" class="line" x1="247.79" y1="19.53" x2="247.79" y2="34.27"/>
+		<line id="line_304" class="line" x1="247.79" y1="34.27" x2="228.79" y2="51.77"/>
+		<line id="line_305" class="line" x1="228.79" y1="43.02" x2="228.79" y2="65.77"/>
+		<line id="line_306" class="line" x1="228.79" y1="57.39" x2="247.79" y2="68.77"/>
+		<line id="line_307" class="line" x1="247.79" y1="68.77" x2="247.79" y2="92.77"/>
+		<line id="line_308" class="line" x1="247.79" y1="92.77" x2="228.79" y2="107.77"/>
+		<line id="line_309" class="line" x1="228.79" y1="94.77" x2="228.79" y2="122.77"/>
+		<line id="line_310" class="line" x1="228.79" y1="111.77" x2="247.79" y2="125.77"/>
+		<line id="line_311" class="line" x1="247.79" y1="125.77" x2="247.79" y2="141.77"/>
+		<line id="line_312" class="line" x1="243.05" y1="63.08" x2="247.79" y2="68.77"/>
+		<line id="line_313" class="line" x1="246.42" y1="67.92" x2="239.29" y2="67.92"/>
+		<line id="line_314" class="line" x1="247.79" y1="125.77" x2="242.85" y2="118.77"/>
+		<line id="line_315" class="line" x1="247.79" y1="125.77" x2="241.96" y2="125.77"/>
+		<line id="line_374" class="line" x1="247.79" y1="19.53" x2="139.66" y2="19.53"/>
+		<line id="line_400" class="line" x1="249.81" y1="141.77" x2="139.66" y2="142.29"/>
+		<rect id="rect" class="rect" x="161.33" y="175.71" width="68.98" height="42.43" rx="0" ry="0"/>
+		<line id="line_412" class="line" x1="161.33" y1="179.36" x2="142.33" y2="179.36"/>
+		<line id="line_423" class="line" x1="161.33" y1="211.5" x2="142.33" y2="211.5"/>
+		<line id="line_437" class="line" x1="229.79" y1="184.36" x2="248.79" y2="184.36"/>
+		<line id="line_459" class="line" x1="229.79" y1="209.5" x2="248.79" y2="209.5"/>
+		<rect id="rect_462" class="rect" x="161.33" y="225.1" width="68.98" height="42.43" rx="0" ry="0"/>
+		<line id="line_463" class="line" x1="161.33" y1="228.75" x2="142.33" y2="228.75"/>
+		<line id="line_464" class="line" x1="161.33" y1="260.89" x2="142.33" y2="260.89"/>
+		<line id="line_465" class="line" x1="229.79" y1="233.75" x2="248.79" y2="233.75"/>
+		<line id="line_466" class="line" x1="229.79" y1="258.89" x2="248.79" y2="258.89"/>
+		<line id="line_494" class="line" x1="247.78" y1="80.76" x2="303.82" y2="80.77"/>
+		<ellipse id="ellipse_517" class="ellipse" cx="306.29" cy="80.77" rx="5.21" ry="6"/>
+		<line id="line_572" class="line" x1="248.79" y1="209.5" x2="248.79" y2="233.75"/>
+		<line id="line_580" class="line" x1="248.79" y1="258.89" x2="248.79" y2="271.03"/>
+		<line id="line_618" class="line" x1="248.79" y1="271.03" x2="306.29" y2="271.03"/>
+		<ellipse id="ellipse_619" class="ellipse" cx="311.5" cy="271.03" rx="5.21" ry="6"/>
+		<ellipse id="ellipse_656" class="ellipse" style="fill:#000000;" cx="247.79" cy="180.36" rx="3.71" ry="5.28"/>
+		<ellipse id="ellipse_657" class="ellipse" style="fill:#000000;" cx="247.79" cy="149.28" rx="3.71" ry="5.28"/>
+		<ellipse id="ellipse_658" class="ellipse" style="fill:#000000;" cx="247.79" cy="165.22" rx="3.71" ry="5.28"/>
+		<text id="text_659" class="text font-size-default" x="60.89" y="58.5">
+			<tspan dx="0" dy="30.44" x="60.89">Vc</tspan>
+		</text>
+		<text id="text_2" class="text font-size-default" x="280.17" y="35.64">
+			<tspan dx="0" dy="30.44" x="280.17">V+</tspan>
+		</text>
+		<text id="text_3" class="text font-size-default" x="290.58" y="223.37">
+			<tspan dx="0" dy="30.44" x="290.58">V-</tspan>
+		</text>
+		<g id="Capacitor">
+			<g id="Right">
+				<rect id="rect_33" class="rect" style="fill:#000000;" transform="matrix(0,1,-1,0,227.4749984741,-51.8349990845)" x="137.36" y="73.32" width="4.59" height="29" rx="0" ry="0"/>
+				<line id="line_45" class="line" transform="matrix(0,1,-1,0,255.8549957275,-23.4550018311)" x1="113.56" y1="116.2" x2="165.75" y2="116.2"/>
+			</g>
+			<g id="Left">
+				<rect id="rect_34" class="rect" style="fill:#000000;" transform="matrix(0,1,-1,0,213.6549987793,-65.6549987793)" x="137.36" y="59.5" width="4.59" height="29" rx="0" ry="0"/>
+				<line id="line_58" class="line" transform="matrix(0,1,-1,0,185.2700042725,-94.0500030518)" x1="165.75" y1="45.61" x2="113.57" y2="45.61"/>
+			</g>
+		</g>
+		<text id="text" class="text font-size-xs" x="56.89" y="225.1">
+			<tspan dx="0" dy="21.95" x="56.89">Vc</tspan>
+		</text>
+		<text id="text_1" class="text font-size-xs" x="57.89" y="178.17">
+			<tspan dx="0" dy="21.95" x="57.89">Vc</tspan>
+		</text>
+		<text id="text_4" class="text font-size-xs" x="100.57" y="83.82">
+			<tspan dx="0" dy="21.95" x="100.57">1</tspan>
+		</text>
+		<g id="Capacitor_10">
+			<g id="Right_6">
+				<rect id="rect_5" class="rect" style="fill:#000000;" transform="matrix(0,1,-1,0,338.5050048828,55.4649963379)" x="140.91" y="186.68" width="1.22" height="20.61" rx="0" ry="0"/>
+				<line id="line" class="line" transform="matrix(0,1,-1,0,346.0700073242,63.0299987793)" x1="134.57" y1="204.55" x2="148.47" y2="204.55"/>
+			</g>
+			<g id="Left_9">
+				<rect id="rect_7" class="rect" style="fill:#000000;" transform="matrix(0,1,-1,0,334.8249969482,51.7849884033)" x="140.91" y="183" width="1.22" height="20.61" rx="0" ry="0"/>
+				<line id="line_8" class="line" transform="matrix(0,1,-1,0,327.2649993896,44.2350006104)" x1="148.46" y1="185.75" x2="134.57" y2="185.75"/>
+			</g>
+		</g>
+		<g id="Capacitor_24">
+			<g id="Right_20">
+				<rect id="rect_18" class="rect" style="fill:#000000;" transform="matrix(0,1,-1,0,388.9049987793,105.8450012207)" x="140.92" y="237.07" width="1.22" height="20.61" rx="0" ry="0"/>
+				<line id="line_19" class="line" transform="matrix(0,1,-1,0,396.4700012207,113.4100036621)" x1="134.58" y1="254.94" x2="148.48" y2="254.94"/>
+			</g>
+			<g id="Left_23">
+				<rect id="rect_21" class="rect" style="fill:#000000;" transform="matrix(0,1,-1,0,385.2250061035,102.1650085449)" x="140.92" y="233.39" width="1.22" height="20.61" rx="0" ry="0"/>
+				<line id="line_22" class="line" transform="matrix(0,1,-1,0,377.6649932861,94.6150054932)" x1="148.47" y1="236.14" x2="134.58" y2="236.14"/>
+			</g>
+		</g>
+		<text id="text_25" class="text font-size-xs" x="88.99" y="191.69">
+			<tspan dx="0" dy="21.95" x="88.99">n-1</tspan>
+		</text>
+		<text id="text_26" class="text font-size-xs" x="88.99" y="234.98">
+			<tspan dx="0" dy="21.95" x="88.99">n</tspan>
+		</text>
+	</g>
+</svg>
