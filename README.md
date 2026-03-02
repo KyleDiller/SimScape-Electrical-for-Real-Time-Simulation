@@ -75,4 +75,9 @@ List of models in FPGA/:
 Pejovic switches offer the advantage of having a constant admittance in both ON and OFF position. This constant admittance avoid the need for refactorisation of nodal equation (or state-space permutation matrix), something to avoid in FPGA because it is very time costly.
 As I am not expert (yet) on MATLAB HDL coder,nor do I have FPGA boards, I would like to have feedback on the actual implementation of these models.
 
+MATE-SOCS/  Files for reconfigurable System-On-Chip Solver for FPGA implementation in HDL-Coder ready format.
+This solver is a variable-topology, variable parameter solver for FPGA. The advantage of this solver is that the user can change the SimScape topology and element parameter WITHOUT re-generation of a new bitstream. One bitstream to rule them all. There are limitations of course and this the first version.
+
+  - MATE_HDLsolver_myFirstCircuit.slx is a little example with 2-level inverter (energy-compensated), some RLC elements and switched load. One can make parameter and topology modifications on it (in the Simspace reference model). MakeMate2() will then extract parameters and topology to run on the HDL-Coder fixed MATE-SOCS.
+
 - Cite as Kyle Diller, SimScape Electrical models for real-time, 2026.
