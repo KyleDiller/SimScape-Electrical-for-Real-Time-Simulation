@@ -503,6 +503,19 @@ while i<=size(blk,1)
         source_parameter{len,1}=blk{i,2};
         source_parameter{len,2}=[vals{1} vals{2} vals{3}];
         i=i+1;
+      elseif blk{i,2}==25 %Controlled Current Source
+        % paramNames=[];
+        % paramNames{1}='amp';
+        % paramNames{2}='shift';
+        % paramNames{3}='frequency';
+        % vals=ObtainParameterValue(blk{i,1},paramNames);
+        source=[source ; blk{i,3} blk{i,4} 1 0 0 50];
+        sourcenames{size(source,1),1}=blk{i,1};
+        sourcenames{size(source,1),2}=i;
+        len=size(source,1);
+        source_parameter{len,1}=blk{i,2};
+        source_parameter{len,2}=[-1 -1 -1];
+        i=i+1;
     elseif blk{i,2}==9 %AC voltage Source
         paramNames=[];
         paramNames{1}='amp';
@@ -510,6 +523,20 @@ while i<=size(blk,1)
         paramNames{3}='frequency';
         vals=ObtainParameterValue(blk{i,1},paramNames);
         source=[source ; blk{i,3} blk{i,4} 0 vals{1} vals{2} vals{3}];
+        sourcenames{size(source,1),1}=blk{i,1};
+        sourcenames{size(source,1),2}=i;
+        len=size(source,1);
+        source_parameter{len,1}=blk{i,2};
+        source_parameter{len,2}=[vals{1} vals{2} vals{3}];
+        i=i+1;
+     elseif blk{i,2}==21 %Voltage Source
+        paramNames=[];
+        paramNames{1}='dc_voltage';
+        paramNames{2}='ac_voltage';
+        paramNames{3}='ac_shift';
+        paramNames{4}='ac_frequency';
+        vals=ObtainParameterValue(blk{i,1},paramNames);
+        source=[source ; blk{i,3} blk{i,4} 0 vals{2} vals{3} vals{4}];
         sourcenames{size(source,1),1}=blk{i,1};
         sourcenames{size(source,1),2}=i;
         len=size(source,1);
@@ -742,7 +769,13 @@ for i=1:length(paramNames)
             vals{i}=evalin('base',val);
         end
         catch
-            error(['3: not able to obtain params of block' blk])
+            try
+                tmp=['value@' str];
+                vals{i} = get_param(blk, tmp);
+            catch
+
+                error(['3: not able to obtain params of block' blk]);
+            end
         end
 end
 end

@@ -1,4 +1,4 @@
-function [outstr,y_type,output_sig] = BuildSPSYout(Vnode, switches,cur_br_all,rlcnames,sourcenames,switchnames)
+function [outstr,y_type,output_sig,allSensorNames] = BuildSPSYout(Vnode, switches,cur_br_all,rlcnames,sourcenames,switchnames,Vmeas,VSensorNames)
 % % The measurements that you request follow, in any order.
 % %
 % y_u1='U_n10_11';			%U_Sw1= Voltage across Sw1
@@ -12,6 +12,9 @@ function [outstr,y_type,output_sig] = BuildSPSYout(Vnode, switches,cur_br_all,rl
 % 
 % yout=char(y_u1,y_u2,y_i3,y_i4,y_u5,y_i6,y_u7,y_u8);								% outputs
 % % y_type=[0,0,1,1,0,1,0,0];				%output types; 0=voltage 1=current
+allSensorNames={};
+indx=0;
+
 
 outstr=[];
 y_type=[];
@@ -28,9 +31,21 @@ for i=1:size(switches,1)
     output_sig{i}=switchnames{i};
 end
 off=size(switches,1)
-for i=1:length(Vnode)
+% for i=1:length(Vnode)
+%     str='U_n';
+%     str=[str num2str(Vnode(i)) '_0'];
+%     if isempty(outstr)
+%         outstr=str;
+%     else
+%         outstr=char(outstr, str);
+%     end
+%     y_type=[y_type 0];
+%     output_sig{i+off}=str;
+% end
+
+for i=1:size(Vmeas,1)
     str='U_n';
-    str=[str num2str(Vnode(i)) '_0'];
+    str=[str num2str(Vmeas(i,1)) '_' num2str(Vmeas(i,2))];
     if isempty(outstr)
         outstr=str;
     else
@@ -38,7 +53,10 @@ for i=1:length(Vnode)
     end
     y_type=[y_type 0];
     output_sig{i+off}=str;
+    indx=indx+1;allSensorNames{indx,1}=VSensorNames{i,1};
 end
+
+
 
 for i=1:size(cur_br_all,1)
     % get branches blk index
@@ -88,9 +106,11 @@ for i=1:size(cur_br_all,1)
             str=[str cur_br_all{i,4}(j) 'I' num2str(k)];
         end
         
+        
     end
     if ~isempty(str)
     outstr=char(outstr, str);
+    indx=indx+1;allSensorNames{indx,1}=cur_br_all{i,1};
     y_type=[y_type 1];
     end
    
