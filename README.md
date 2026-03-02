@@ -22,9 +22,9 @@ In this repository, we find:
 I don't have a SpeedGoat simulator so if you want to test the model and report the performance, that would be great. It is also possible to port them to other RTDS with some skills.
 
 Folder description:
+Documentation/  contains various reading for real-time simulation aficionado. Read the MATE-SOCS article, nice!
 
 MATE: main Simulink library and associated files. Put in your MATLAB path to use the other models.
-MATE/doc : contains various reading for real-time simulation aficionado.
 MATE/slx/simetranss.slx: my dream library of models. For example, a unified configurable RLC series/parallel block with matching icon.
 Note: if some models accidentally point to simetran.slx library (my first library), the corresponding model can be found in simetranss.slx.
 
