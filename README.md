@@ -79,6 +79,8 @@ MATE-SOCS/  Files for reconfigurable System-On-Chip Solver for FPGA implementati
 This solver is a variable-topology, variable parameter solver for FPGA. The advantage of this solver is that the user can change the SimScape topology and element parameter WITHOUT re-generation of a new bitstream. One bitstream to rule them all. There are limitations of course and this the first version.
 
     -MATE_HDLsolver_myFirstCircuit.slx is a little example with 2-level inverter (energy-compensated), some RLC elements and switched load. One can make parameter and topology modifications on it (in the Simspace reference model). MakeMate2() will then extract parameters and topology to run on the HDL-Coder fixed MATE-SOCS.
+    -MATE_HDLsolver_my4thCircuit.slx: more complex... same as myFirst* but with added transformer and in a Buck converter configuration, which is like NOT firing the lower IGBT of a 2-level inverter.
+    -Coming soon: myThird* with a switching function inverter with high-impedance capability (i.e. works fine when no gate is fired!) and Time-Step over-sampling and averaging capability (will give an equivalent 5ns accuracy in Implemented on a 200 MHz FPGA).
 
 
 Cite as Kyle Diller, SimScape Electrical models for real-time, 2026.
