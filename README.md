@@ -34,18 +34,18 @@ HVDC-MMC-200cellsPerArms: a full HVDC MMC bipolar link with distributed paramete
 
 HVDC_bipolar_Thyristor: a full HVDC bipolar link with distributed parameter lines, switched filter/reactive power compensation banks. Ready for concurent/parallel execution on SpeedGoat, using 4 different tasks.
 
-NetworkDecouplingTechnique: The IEEE 13 node fedder SimScape model is used to demonstrate proper ways to decouple power system equation thougth the use of stublines and stublines transformer. The model and various techniques are explained in more details in MATE/doc/MATE_StublineHowTo.pdf
+NetworkDecouplingTechnique: The IEEE 13 node feeder SimScape model is used to demonstrate proper ways to decouple power system equation with the use of stublines and stublines transformer. The model and various techniques are explained in more details in MATE/doc/MATE_StublineHowTo.pdf
 
 Stublines are Bergeron Line model with losses adjusted to have exactly one-time setp of propagation delay.
 Stubline are commonly used in real-time simulators with power transformer. By replacing the secondary leakeage
-inductance with a stubline, one obtains an accurate point of decoupling for the grid equations
+inductances with stublines, one obtains an accurate point of decoupling for the grid equations.
 
 DistributionGrids: Using the techniques of /NetworkDecouplingTechnique, distribution grid models are presented here.
 List of models: IEEE 123 node test feeder model.
 
-OversampledPowerConverters: Explains how to simulate high-frequency PWM converter with oversampling of IGBT/GTO/MOSFET gate signal. In the model, the 2-level inverter feed a 3-phase RL load with back-EMF. Sample time is 30 us and the PWM frequency is 3 kHz. However, the accuracy of the simulation is equivalent to a 2 us sample time, why? Because of oversampling and averaging of the gate pulses. In real-time simulator, this resolution can go as low as 10 nanoseconds with FPGA boards. The model is explained in more details in MATE/doc/MATE_OversamplingPowerConverters.pdf
+OversampledPowerConverters/ Explains how to simulate high-frequency PWM converter with oversampling of IGBT/GTO/MOSFET gate signal. In the model, the 2-level inverter feed a 3-phase RL load with back-EMF. Sample time is 30 us and the PWM frequency is 3 kHz. However, the accuracy of the simulation is equivalent to a 2 us sample time, why? Because of oversampling and averaging of the gate pulses. In real-time simulator, this resolution can go as low as 10 nanoseconds with FPGA boards. The model is explained in more details in MATE/doc/MATE_OversamplingPowerConverters.pdf
 
-Machines/  : contain many machine types (Synchronous, induction) designed with constant Jacobian (admittance), best for real-time simulation because the SimScape solver do not need to refactorize its equations for these node (assuming that the SimScape solver can optimally order its nodes).
+Machines/: contain many machine types (Synchronous, induction) designed with constant Jacobian (admittance), best for real-time simulation because the SimScape solver do not need to refactorize its equations for these node (assuming that the SimScape solver can optimally order its nodes).
 
 FPGA/: In this folder will be found models suitable for FPGA simulation and HDL Coder. These models contains only Pejovic switches and Switching Function Inverters with full rectification and high impedance mode support.
 
