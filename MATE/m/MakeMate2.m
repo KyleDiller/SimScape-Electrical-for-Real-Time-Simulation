@@ -4,6 +4,10 @@ function [MATE, MATERT,blk]= MakeMate2(modele, disc)
 SILENT=0;  % 0 = less disp()
 opt=0;
 
+if nargin==1
+    disc=1;  % default backward euler
+end
+
 % 23 juillet  works on RTScape_netlist23juillet.slx
 %zip('backup.zip', {'*.m', '*.mat'});
 
@@ -90,6 +94,8 @@ blkmask={
   ['Circuit Breaker' 10 '(Three-Phase)'],[2 3],[1 1],'ee.switches.circuit_breaker.ps.abc',{'TBD'}; %23
   ['Two-Winding' 10 'Transformer' 10 '(Three-Phase)'],[1 2],    [1 1], 'ee.passive.transformers.two_winding_transformer.abc',{'TBD'};  %24  NOTE: Y port not available yet
   ['Controlled Current' 10 'Source'],[1 3],[1 1],-1,{'LConn1', 'RConn2'};  %25
+  'Ideal Transformer',[1 3],[2 2],-1,{'LConn1', 'LConn2', 'RConn1','RConn2'}; 
+  ['Controlled Voltage' 10 'Source'],[1 3],[1 1],-1,{'LConn1', 'RConn2'};  %27
 };
 
 
@@ -120,6 +126,8 @@ for i=1:nb_blk
                 qq=j;
                 flag=1;
                 break;
+            elseif isequal(blkmask{j,5},'TBD')
+                error(['blocktype: ' blkmask{j,5} ' is not supported yet. Block name is:' blk{i,1}]);
             else                
                 % cond=isequal(get_param(blk{i,1}, 'ComponentPath'),blkmask{j,4});
                 % if cond==0
@@ -409,20 +417,20 @@ NodeNumber=max(nets)+1;
         disp('Prepare S-function data ')
         MATE=MATE_Sfun_DataFormat(rlc, source, switches, yout,Adp,B1dp,B2dp,Cdp,Ddp, Yp, Cinj_p, Dinj_p, z_p, x_p,mateblk,u0,x0, statenames, rlcnames, sourcenames,switchtype,nb_nodal_nodes,portType, Ts,switchVf);
         MATERT=MATE_Mex_DataFormat(A,B,C,D, switches,switchtype,disc,u0,x0, Ts,MATE.sizes,switchVf);
-        disp('Reorder the MATE source from external connexions ')
-        try
-        RouteMATESources(modele, src_order,'MATE_Equivalent/InputElectricMixer');  %% must change the name if in a subsystem
-        catch
-            warning('No rewrite order of source done!!!')
-        end
-        disp('Adding Simulink source in place of Simscape ones ')
-        try
-        [srcParam,src_Selector]=AddSources(source_parameter,size(switches,1),nb_nodal_nodes);  %srcParam is use directly as a parameter in the model
-        catch
-            warning('No adds of source done!!!')
-        end
-        MATE.srcParam=srcParam;
-        MATE.src_Selector=src_Selector;
+        % disp('Reorder the MATE source from external connexions ')
+        % try
+        % RouteMATESources(modele, src_order,'MATE_Equivalent/InputElectricMixer');  %% must change the name if in a subsystem
+        % catch
+        %     warning('No rewrite order of source done!!!')
+        % end
+        % disp('Adding Simulink source in place of Simscape ones ')
+        % try
+        % [srcParam,src_Selector]=AddSources(source_parameter,size(switches,1),nb_nodal_nodes);  %srcParam is use directly as a parameter in the model
+        % catch
+        %     warning('No adds of source done!!!')
+        % end
+        % MATE.srcParam=srcParam;
+        % MATE.src_Selector=src_Selector;
         MATE.source_parameter=source_parameter;
         MATE.switch_parameter=switch_parameter;
         MATE.src_order=src_order;
@@ -436,7 +444,9 @@ NodeNumber=max(nets)+1;
         %     disp('FPGA routine: finished')
         %     return;
         % end
-
+        if 1==1
+            disp('MATE-SoCS data generated with success') 
+        else
         disp('Routing Simulink switch signal in place of Simscape ones ') 
         try
         [swParam, masterSwSelOrder]=AddSwitches(modele,switchnames,'InternalSwitchMixer');
@@ -450,6 +460,7 @@ NodeNumber=max(nets)+1;
             SetMATEOutputSignals([model_top '/MATE_Equivalent/MATEOutputSelector'],MATE,sensorV,sensorI,switchnames);
         catch
             warning('Error in output routing... continuing!!!')
+        end
         end
     %end
 

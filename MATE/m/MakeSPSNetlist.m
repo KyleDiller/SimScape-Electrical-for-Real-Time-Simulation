@@ -487,6 +487,23 @@ while i<=size(blk,1)
 
         i=i+3;
 
+    elseif blk{i,2}==26 %ideal xfo
+        paramNames=[];
+        paramNames{1}='n';
+        vals=ObtainParameterValue(blk{i,1},paramNames);
+      
+        rlc=[rlc; blk{i,3}   blk{i,4}  2   0   0  vals{1}];
+        rlc=[rlc; blk{i,5}   blk{i,6}  2   0   0  1      ];
+        rlc=[rlc; MAXNO      blk{i,4}  1   Inf 0  0      ];
+        MAXNO=MAXNO+1;
+        rlcnames{size(rlc,1)-2,1}=[blk{i,1} '_PRIM'];
+        rlcnames{size(rlc,1)-1,1}=[blk{i,1} '_SEC'];
+        rlcnames{size(rlc,1)-0,1}=[blk{i,1} '_MAG'];
+        rlcnames{size(rlc,1)-2,2}=i;
+        rlcnames{size(rlc,1)-1,2}=i;
+        rlcnames{size(rlc,1)-0,2}=i;
+        i=i+1;
+
         %%%%%%%%%%%%
         %%% SOURCE
         %%%%%%%%%%%%
@@ -510,6 +527,19 @@ while i<=size(blk,1)
         % paramNames{3}='frequency';
         % vals=ObtainParameterValue(blk{i,1},paramNames);
         source=[source ; blk{i,3} blk{i,4} 1 0 0 50];
+        sourcenames{size(source,1),1}=blk{i,1};
+        sourcenames{size(source,1),2}=i;
+        len=size(source,1);
+        source_parameter{len,1}=blk{i,2};
+        source_parameter{len,2}=[-1 -1 -1];
+        i=i+1;
+      elseif blk{i,2}==27 %Controlled Voltage Source
+        % paramNames=[];
+        % paramNames{1}='amp';
+        % paramNames{2}='shift';
+        % paramNames{3}='frequency';
+        % vals=ObtainParameterValue(blk{i,1},paramNames);
+        source=[source ; blk{i,3} blk{i,4} 0 0 0 50];
         sourcenames{size(source,1),1}=blk{i,1};
         sourcenames{size(source,1),2}=i;
         len=size(source,1);
